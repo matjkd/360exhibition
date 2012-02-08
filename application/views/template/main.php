@@ -26,15 +26,14 @@
 
         </header>
         <div role="main">
-            
-            <div class="backdrop">
-                <div class="direction left"></div>
+          </div>   
+           
 
                 <?= $this->load->view('mainpage/main') ?>
-                    <div class="direction right"></div>
-            </div>
+                  
+         
             
-        </div>
+       
         <footer>
 
         </footer>
@@ -43,9 +42,11 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+          <script src="<?= base_url() ?>js/parallax.js"></script>
         <script src="<?= base_url() ?>js/plugins.js"></script>
         <script src="<?= base_url() ?>js/script.js"></script>
+
 
 
     </body>
