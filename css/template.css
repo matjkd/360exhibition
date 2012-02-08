@@ -1,0 +1,40 @@
+/* 
+    Document   : template.css
+    Created on : 08-Feb-2012, 12:25:20
+    Author     : mat
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.backdrop {
+
+    position:relative;
+    height:800px; /*could be anything really..*/
+    width:100%; /*could be anything really..*/
+    border:3px solid #6699ff;
+    overflow:hidden;
+}
+.direction{
+    position:absolute;
+    width:20%;
+    height:100%;
+    z-index:5000;
+   
+}
+.left{left:0;top:0;}
+.right{right:0;top:0;}
+
+.scrollerdiv {
+position:fixed;
+    width:2482px; 
+    height:807px; 
+    background:url('backgrounds/Standswithinhall.jpg');
+    border:1px solid #333;
+    left:0px;
+}
+
