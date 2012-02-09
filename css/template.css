@@ -21,9 +21,21 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 100%;
 }
  
 #parallax div {
     position: absolute;
+}
+
+#parallax_background {
+    width:2400px; 
+    height: 1800px;
+    background: url('backgrounds/background.png') transparent;
+}
+
+#parallax_foreground {
+    width:2500px;
+    height: 1875px; 
+    background: url('backgrounds/foreground.png') transparent;
 }
