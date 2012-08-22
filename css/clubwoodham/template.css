@@ -370,7 +370,7 @@ ul.topnav {
     padding: 0 0px;
     margin: 0;
     float: left;
-    width: 920px;
+    width: 960px;
     background: #222;
 
     background: url(topnav_bg.gif) repeat-x;
@@ -483,6 +483,7 @@ ul.subnav li a{
     color: #669;
     border-top: 1px solid transparent;
     position:relative;
+ 
 }
 #box-table-a tr:hover td
 {
@@ -540,13 +541,15 @@ ul.subnav li a{
     width:16px;
     height:16px;
 
+
 }
 .infobox
 {
     position:absolute;
     width:300px;
     padding:10px;
-    z-index:2000;
+    left:30px;
+    z-index:20000;
     display: none;
     margin:0px;
     background-color: black;

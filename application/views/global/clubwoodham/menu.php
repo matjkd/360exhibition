@@ -35,13 +35,7 @@
 
         </ul></li>
     <li><?= anchor('seniors', 'Seniors') ?></li>
-    <li><a href="#">Circuit Gym</a>
-      <ul class="subnav">
-            <li><?= anchor('circuit-gym', 'Overview') ?>
-            <li><?= anchor('/timetable/main/circuitgym', 'Timetable') ?></li>
-            <li><?= anchor('/circuit-gym-membership', 'Membership') ?></li>
-        </ul>
-    </li>
+   
     <li><?= anchor('membership', 'Membership') ?></li>
     <li><?= anchor('/contact', 'Contact us') ?></li>
 

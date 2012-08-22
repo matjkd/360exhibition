@@ -31,7 +31,7 @@ if (isset($meta_keywords) && $meta_keywords != NULL) {
 }
 ?>">
 <meta name="author" content="DesignCo">
-<meta name="google-site-verification" content="ZtOBF7g-jbwhbuUHZvQvrUUHcIB01QSijub1CvuGOLI" />
+<meta name="google-site-verification" content="6b-awvPu0rGpkROf98Kuhjsjc7AAp4paL9cGex6Bq6k" />
 <!--  Mobile viewport optimized: j.mp/bplateviewport -->
 <meta name="viewport" content="width=960, initial-scale=1.0">
 
@@ -53,7 +53,7 @@ if (isset($meta_keywords) && $meta_keywords != NULL) {
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/base.css">
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/layout.css">
 <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/skeleton.css">
-<link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/template.css">
+<link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/template.css?20082012">
 
 <!--[if lt IE 8]>    <link rel="stylesheet" href="<?= base_url() ?>css/<?=$this->config_theme?>/ie8.css"> <![endif]-->
 

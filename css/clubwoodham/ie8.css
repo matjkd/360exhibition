@@ -10,10 +10,14 @@
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
+
+
+
 #HomePicOverlay {
    display:block;
    z-index: 401;
 }
+
 #HomePicOverlay2 {
    display:block;
         z-index: 401;

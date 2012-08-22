@@ -2,12 +2,12 @@
     <?= form_open('email/send'); ?>
     <br/>
     <p class="form_name">
-        <?= form_label('Full Name') ?><br/>
+        <?= form_label('Full Name') ?>
         <?= form_input('name', set_value('name')) ?>
     </p>
 
     <p class="form_phone">
-        <?= form_label('Phone Number') ?><br/>
+        <?= form_label('Phone Number') ?>
         <?= form_input('phone', set_value('phone')) ?>
     </p>
 
@@ -27,7 +27,7 @@
     <p class="form_subject">
         <?= form_label('Areas of interest') ?><br/>
         <?= form_checkbox('interest[]', 'Gym Membership', set_checkbox('interest', 'Gym Membership')) ?>Gym Membership<br/>
-        <?= form_checkbox('interest[]', 'Easy Gym', set_checkbox('interest', 'Easy Gym')) ?>Easy Gym<br/>
+      
         <?= form_checkbox('interest[]', 'VIP Days', set_checkbox('interest', 'VIP Days')) ?>VIP Days<br/>
         <?= form_checkbox('interest[]', 'Bar and Restaurant Bookings', set_checkbox('interest', 'Bar and Restaurant Bookings')) ?>Bar and Restaurant Bookings<br/>
         <?= form_checkbox('interest[]', 'Squash and Raquetball', set_checkbox('interest', 'Squash and Raquetball')) ?>Squash and Raquetball<br/>

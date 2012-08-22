@@ -62,12 +62,12 @@
 
 
                 <div id="<?= $daysrow ?>" class="tabdiv">
-                    <table class="timetable" id="box-table-a">
+                    <table class="timetable" id="box-table-a" style="z-index:0;">
                         <thead>
                             <tr>
                                 <th>Time</th>
                                 <th>Class</th>
-                                <th></th>
+                                <th style="width:20px; padding-right:0px;"></th>
                                 <?php if ($instructor == 1) { ?><th>Instructor</th><?php } ?>
 
                                 <?php if ($level == 1) { ?><th>Level</th><?php } ?>
@@ -100,23 +100,45 @@
                                 <?php if ($day == $daysrow) { ?>
 
 
-                                    <tr>
-                                        <td> <?= substr($row->from, 0, -3) ?> - <?= substr($row->to, 0, -3) ?></td>
-                                        <td> <?= $row->class ?> </td>
-                                        <td><?php if ($row->description > 0) { ?><span class="hoverbox"><span class="ui-icon ui-icon-info"></span><span class="infobox"><?= $row->content ?></span></span><?php } ?></td>
-                                        <?php if ($instructor == 1) { ?><td><?= $row->instructor ?></td><?php } ?>
-                                        <?php if ($level == 1) { ?><td><?= $row->level ?></td><?php } ?>
-                                        <?php if ($where == 1) { ?> <td><?= $row->where ?></td><?php } ?>
-                                        <td><strong><a href="#">Book Now</a></strong></td>
-                                        <?php
-                                        $is_logged_in = $this->session->userdata('is_logged_in');
-                                        if (!isset($is_logged_in) || $is_logged_in == true) {
-                                            ?>
-                                            <td><a href="<?= base_url() ?>admin/edit_timetable/<?= $row->timetable_id ?>">Edit</a> | <a href="<?= base_url() ?>admin/delete_timetable/<?= $row->timetable_id ?>">Delete</a></td>
-                                        <?php } ?>
-                                    </tr>
+					<tr>
+						<td><?= substr($row->from, 0, -3) ?> - <?= substr($row->to, 0, -3) ?>
+						</td>
+						<td><?= $row->class ?>
+						</td>
+						<td style="z-index:100; padding:0px;"><?php if ($row->description > 0) { ?>
+						
+							<div class="hoverbox">
+							
+								<span class="ui-icon ui-icon-info"></span>
+								
+								<div class="infobox">
+									<?= $row->content ?>
+								</div>
+								
+							</div> <?php } ?></td>
+						<?php if ($instructor == 1) { ?>
+						<td><?= $row->instructor ?></td>
+						<?php } ?>
+						<?php if ($level == 1) { ?>
+						<td><?= $row->level ?></td>
+						<?php } ?>
+						<?php if ($where == 1) { ?>
+						<td><?= $row->where ?></td>
+						<?php } ?>
+						<td><strong><a href="#">Book Now</a> </strong></td>
+						<?php
+						$is_logged_in = $this->session->userdata('is_logged_in');
+						if (!isset($is_logged_in) || $is_logged_in == true) {
+							?>
+						<td><a
+							href="<?= base_url() ?>admin/edit_timetable/<?= $row->timetable_id ?>">Edit</a>
+							| <a
+							href="<?= base_url() ?>admin/delete_timetable/<?= $row->timetable_id ?>">Delete</a>
+						</td>
+						<?php } ?>
+					</tr>
 
-                                <?php } ?>
+					<?php } ?>
 
                             <?php endforeach; ?>
                         </tbody>

@@ -1,3 +1,8 @@
+<?php if($slideshow_active == "events") {?>
+ <?=$this->load->view("/slideshow/".$slideshow_active."/picture")?>
+<?php } else {?>
+
+
 <style type="text/css" >
     .slideshow { height: 330px;   border-bottom:0px solid #161616; }
     .slideshow img { padding:0px; border: 0px solid #ccc;   }
@@ -24,4 +29,4 @@
     </div>
 
 </div>
-
+<?php }?>
