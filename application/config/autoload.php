@@ -37,7 +37,7 @@
 |
 */
 
-$autoload['packages'] = array();
+$autoload['packages'] = array(APPPATH.'third_party');
 
 
 /*
@@ -52,8 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'session', 'table', 'form_validation', 'email');
-
+$autoload['libraries'] = array('database', 'session', 'xmlrpc', 'form_validation', 'ftp', 'email', 'user_agent');
 
 
 /*
@@ -65,8 +64,7 @@ $autoload['libraries'] = array('database', 'session', 'table', 'form_validation'
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'form', 'date', 'email');
-
+$autoload['helper'] = array('url', 'file', 'form', 'date', 'captcha', 'maincontent');
 
 
 /*
@@ -111,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('content_model', 'products_model');
 
 
 /* End of file autoload.php */

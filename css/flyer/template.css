@@ -1,0 +1,237 @@
+body {
+    background: url('/images/template/flyerdirect/mainback.jpg') repeat-x #f1e7d5;
+    line-height:22px;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+}
+
+@font-face { font-family: 'spinnaker2';
+             src: url('/fonts/Spinnaker-Regular.ttf');
+}
+p {
+    margin-bottom:8px;
+    text-align: left;
+}
+#container {
+
+    width:960px;
+    margin:0px auto;
+    display:block;
+    position:relative;
+    -moz-box-shadow: 5px 6px 19px #000000;
+    -webkit-box-shadow: 5px 6px 19px #000000;
+    box-shadow: 5px 6px 19px #000000;
+    border-top: solid 10px #cd0a0a;
+    z-index:5;
+}
+h1 {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    font-style: normal; 
+    font-weight: 700;
+    text-shadow: none;
+    text-decoration: none;
+    color: #cd0a0a;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.2;
+    margin-bottom:10px;
+}
+
+h2 {
+    color: #cd0a0a;
+}
+#header {
+
+  
+    width:100%;
+
+    display:block;
+    position:relative;
+    z-index:15;
+
+    background:url('/images/template/flyerdirect/headerback.jpg') repeat-x #1a4677; 
+    border-bottom: solid 5px #ffffff;
+    -moz-box-shadow: 0px 6px 19px #000000;
+    -webkit-box-shadow: 0px 6px 19px #000000;
+    box-shadow: 0px 6px 19px #000000;
+}
+
+#footer {
+
+    height:65px;
+    width:960px;
+    background-color: #ffffff;
+    display:block;
+    position:relative;
+
+    border-top: solid 0px #4a5b63;
+}
+#backfooter {
+    display:block;
+    position:absolute;
+    background: url('/images/template/flyerdirect/footerback.jpg') repeat-x #515251;
+    z-index:0;
+    margin-top: -45px;
+    padding-top:50px;
+    width:100%;
+    height:100%;
+    color: #AAA;
+
+}
+#logo {
+    width:960px;
+
+    padding-top:10px;
+    text-align: left;
+    padding-bottom:10px;
+    height:77px;
+    color:#ffffff;
+    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+
+
+}
+#menutop {
+
+    width:100%;
+    height:31px;
+    text-align: right;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 14px;
+    padding-top: 0px;
+    border-top: solid 0px #4a5b63;
+    line-height:31px;;
+    background: url('/images/template/flyerdirect/menuback.jpg') repeat-x #cd0a0a;
+    -moz-box-shadow: 0px 6px 19px #000000;
+    -webkit-box-shadow: 0px 6px 19px #000000;
+    box-shadow: 0px 6px 19px #000000;
+    z-index:25;
+    display:block;
+    position:relative;
+}
+#menutop ul {
+
+    margin-right:auto;
+    margin-left:auto;
+}
+#menutop li {
+    display:inline;
+    padding-right:25px;
+}
+
+#menutop a {
+    text-decoration:none;
+    color: #ffffff;
+}
+.socialicons {
+    padding-top:20px;
+    float:right; position:relative; padding-right:10px;
+}
+.linkicons {
+    padding-top:20px;
+    float:left; position:relative; padding-right:10px;
+}
+.linkicons img {
+    margin-left:20px; 
+}
+.footermenu {
+    clear:both;
+    float:left; 
+    padding-top:20px;
+    position:relative; 
+    padding-left:0px;
+
+    font-size: 1.0em;
+    line-height: 1.6em;
+}
+.footermenu ul {
+
+    margin-left: 0px;
+}
+.footermenu li {
+    display:inline;
+    padding-left: 0px;
+    padding-right:5px;
+
+}
+
+.footermenu a {
+    text-decoration:none;
+    color: #aaa;
+    border-right:1px #292929;
+
+}
+
+.slide_area {
+    width:960px;
+    height:310px;
+    margin: 10px auto;
+    position:relative;
+
+    display:block;
+    z-index:20;
+
+}
+
+#bodycontainer {
+    width:960px;
+    display:block;
+    margin:0 auto;
+    background-color: #ffffff;
+}
+#textcontainer {
+
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#sidebox {
+
+    margin-right:10px;
+    margin-left:10px;
+}
+#sideboxitem {
+    border-top: solid 3px #4a5b63;
+    border-bottom: solid 3px #4a5b63;
+    margin:10px;
+    padding:10px;
+
+    color: #333333;
+
+}
+
+#seo_links {
+    clear:both;
+    float:left; 
+    padding-top:0px;
+    position:relative; 
+    padding-left:0px;
+
+    font-size: 1.0em;
+    line-height: 1.6em;
+}
+
+#seo_links ul {
+    width: 960px;
+    margin-left:0px;
+}
+#seo_links ul li {
+    float:left;
+    width:240px;
+    list-style: none;
+}
+br
+{
+
+    clear:left;
+}
+#seo_links ul li a{
+    display:block;
+    width:240px;
+    text-decoration: none;
+}

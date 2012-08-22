@@ -1,0 +1,20 @@
+/* 
+    Document   : ie8
+    Created on : 24-Apr-2012, 11:15:26
+    Author     : mat
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#HomePicOverlay {
+   display:block;
+   z-index: 401;
+}
+#HomePicOverlay2 {
+   display:block;
+        z-index: 401;
+}
