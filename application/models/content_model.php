@@ -105,7 +105,70 @@ class Content_model extends CI_Model {
             return $query->result();
         }
     }
-
+    function add_case_study() {
+    
+    		
+    
+    	$now = time();
+    	$datetime = $now;
+    	$form_data = array(
+    			'case_title' => set_value('title'),
+    			'description' => $this->input->post('content'),
+    
+    			'date_added' => $datetime
+    	);
+    	$insert = $this->db->insert('case_studies', $form_data);
+    	return $insert;
+    }
+    function update_case_study($id) {
+    
+    		
+    		
+    	$now = time();
+    	$datetime = $now;
+    	$form_data = array(
+    			'case_title' => set_value('title'),
+    			'description' => $this->input->post('content'),
+    				
+    				
+    	);
+    	$this->db->where('case_id', $id);
+    	$update = $this->db->update('case_studies', $form_data);
+    	return $update;
+    }
+    /**
+     *
+     * @param type $filename
+     * @param type $blog_id
+     * @return type
+     */
+    function add_file_to_case($filename, $blog_id, $field) {
+    	$content_update = array(
+    			$field => $filename
+    	);
+    
+    	$this->db->where('case_id', $blog_id);
+    	$update = $this->db->update('case_studies', $content_update);
+    	return $update;
+    }
+    
+    /**
+     *
+     * @param type $filename
+     * @param type $blog_id
+     * @return type
+     */
+    function add_pdf_to_case($filename, $blog_id) {
+    	$content_update = array(
+    			'pdf_link' => $filename
+    	);
+    
+    	$this->db->where('case_id', $blog_id);
+    	$update = $this->db->update('case_studies', $content_update);
+    	return $update;
+    }
+    
+    
     function get_all_news() {
 
         $this->db->where('content_type', 'news');

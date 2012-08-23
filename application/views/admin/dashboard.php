@@ -15,9 +15,8 @@
 <br/>
 <br/>
 
-<!--<a href="<?=base_url()?>admin/add_gallery_content">Add gallery content</a><br/>
+<a href="<?=base_url()?>admin/add_gallery_content">Add gallery content</a><br/>
 
-<a href="<?=base_url()?>admin/add_seo_content">Add SEO content</a><br/>-->
 
 
 
@@ -29,6 +28,6 @@
 
 
 
-<!--<a href="<?=base_url()?>admin/add_content">Add content</a><br/>-->
+<a href="<?=base_url()?>admin/add_content">Add content</a><br/>
 <!--<a href="<?=base_url()?>user/management">User Management</a><br/>-->
 

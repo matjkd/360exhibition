@@ -74,6 +74,14 @@ jQuery(function() {
     jQuery('.wymeditor').wymeditor();
 });
 
+//overlay
+$(document).ready(function() {
+
+
+
+    $("img[rel]").overlay();
+});
+
 $(document).ready(function() {
     $(".services").hover(
         function () {

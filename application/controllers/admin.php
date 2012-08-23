@@ -307,6 +307,119 @@ class Admin extends MY_Controller {
             $this->session->set_flashdata('message', 'News Added');
         }
     }
+    
+    function upload_case_image($id = 0, $field = 0, $height = 110) {
+    
+    	if($field === 0) {
+    		$field = "image_1";
+    	} else {
+    		$field = $field;
+    	}
+    
+    	$this->gallery_model->do_case_upload($field, $height);
+    	$this->gallery_path = "/images/temp";
+    
+    	if (!empty($_FILES) && $_FILES[$field]['error'] != 4) {
+    
+    		$fileName = $_FILES[$field]['name'];
+    		$tmpName = $_FILES[$field]['tmp_name'];
+    		$fileName = str_replace(" ", "_", $fileName);
+    		$filelocation = $fileName;
+    
+    		$thefile = file_get_contents($tmpName, true);
+    
+    		//add filename into database
+    		//get blog id
+    		if ($id == 0) {
+    			$blog_id = mysql_insert_id();
+    		} else {
+    			$blog_id = $id;
+    		}
+    
+    		$this->content_model->add_file_to_case($fileName, $blog_id, $field);
+    		//move the file
+    
+    
+    
+    
+    		if ($this->s3->putObject($thefile, $this->bucket, $filelocation, S3:: ACL_PUBLIC_READ)) {
+    			//echo "We successfully uploaded your file.";
+    			$this->session->set_flashdata('message', 'News Added and file uploaded successfully');
+    		} else {
+    			//echo "Something went wrong while uploading your file... sorry.";
+    			$this->session->set_flashdata('message', 'News Added, but your file did not upload');
+    		}
+    
+    		//put thumb on s3
+    			
+    		$thumbFile =$this->config_base_path . $this->gallery_path . '/thumbs/'.$fileName  ;
+    		$thumbfilelocation =  'thumbs/'.$fileName;
+    		$thumb = file_get_contents($thumbFile, true);
+    
+    		if ($this->s3->putObject($thumb, $this->bucket, $thumbfilelocation, S3:: ACL_PUBLIC_READ)) {
+    			//echo "We successfully uploaded your file.";
+    			$this->session->set_flashdata('message', 'thumb Added and file uploaded successfully');
+    		} else {
+    			//echo "Something went wrong while uploading your file... sorry.";
+    			$this->session->set_flashdata('message', 'your file did not upload');
+    		}
+    
+    		//delete files from server
+    		$this->gallery_path = "./images/temp";
+    		unlink($this->gallery_path . '/' . $fileName . '');
+    		unlink($this->gallery_path . '/thumbs/' . $fileName . '');
+    	} else {
+    
+    		$this->session->set_flashdata('message', 'News Added');
+    	}
+    }
+    
+    function upload_pdf($id = 0) {
+    
+    	$this->gallery_model->do_upload_pdf();
+    
+    
+    	if (!empty($_FILES) && $_FILES['pdf']['error'] != 4) {
+    
+    		$fileName = $_FILES['pdf']['name'];
+    		$tmpName = $_FILES['pdf']['tmp_name'];
+    		$fileName = str_replace(" ", "_", $fileName);
+    		$filelocation = $fileName;
+    
+    		$thefile = file_get_contents($tmpName, true);
+    
+    		//add filename into database
+    		//get blog id
+    		if ($id == 0) {
+    			$blog_id = mysql_insert_id();
+    		} else {
+    			$blog_id = $id;
+    		}
+    
+    		$this->content_model->add_pdf_to_case($fileName, $blog_id);
+    		//move the file
+    
+    			
+    			
+    		if ($this->s3->putObject($thefile, $this->bucket, $filelocation, S3:: ACL_PUBLIC_READ, array(), array('Content-Type'=>'application/pdf'))) {
+    			//echo "We successfully uploaded your file.";
+    			$this->session->set_flashdata('message', ' pdf uploaded successfully');
+    		} else {
+    			//echo "Something went wrong while uploading your file... sorry.";
+    			$this->session->set_flashdata('message', 'your pdf did not upload');
+    		}
+    
+    
+    		//delete files from server
+    		$this->gallery_path = "./images/temp";
+    		unlink($this->gallery_path . '/' . $fileName . '');
+    
+    	} else {
+    
+    		$this->session->set_flashdata('message', 'pdf Added');
+    	}
+    }
+    
 
     function submit_content() {
         $this->form_validation->set_rules('title', 'Title', 'trim|max_length[255]|required');
@@ -328,7 +441,7 @@ class Admin extends MY_Controller {
 
 
 
-                redirect('/admin');   // or whatever logic needs to occur
+               redirect('/admin');   // or whatever logic needs to occur
             } else {
                 echo 'An error occurred saving your information. Please try again later';
                 // Or whatever error handling is necessary
@@ -518,6 +631,44 @@ class Admin extends MY_Controller {
         $this->load->vars($data);
         $this->load->view('template/main');
     }
+    function add_case_study() {
+    	$id = "add_content";
+    	$data['content'] = $this->content_model->get_content($id);
+    	$data['menu'] ="Add Content";
+    	$data['main_content'] = "admin/add_case_study";
+    	$data['pages'] = $this->content_model->get_all_content();
+    
+    	$this->load->vars($data);
+    	$this->load->view('template/main');
+    }
+    
+    
+    function submit_case_study() {
+    	$this->form_validation->set_rules('title', 'Title', 'trim|max_length[255]|required');
+    	$this->form_validation->set_rules('content', 'Content', 'trim');
+    
+    
+    	if ($this->form_validation->run() == FALSE) { // validation hasn'\t been passed
+    		echo "validation error";
+    	} else { // passed validation proceed to post success logic
+    		if ($this->content_model->add_case_study()) { // the information has therefore been successfully saved in the db
+    			//now process the image
+    			// run insert model to write data to db
+    			//upload file
+    			//retrieve uploaded file
+    			$blog_id = mysql_insert_id();
+    			$this->upload_case_image($blog_id);
+    			$this->upload_pdf($blog_id);
+    
+    
+    		//	redirect('/admin');   // or whatever logic needs to occur
+    		} else {
+    			echo 'An error occurred saving your information. Please try again later';
+    			// Or whatever error handling is necessary
+    		}
+    	}
+    }
+    
 
     function add_class_content() {
         $data['slideshowtoggle'] = "off";
