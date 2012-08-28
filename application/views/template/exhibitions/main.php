@@ -20,7 +20,7 @@
        <?php if(isset($hide_top) && $hide_top == 1) { } else {?>
             <div id="" class="one-third column">
 
-<div class="boxesFront ">LOGO</div>
+<div class="boxesFront "><img height="130px" src="<?=base_url()?>images/icons/exhibitionsLogo.png"/></div>
 
 
             </div>
