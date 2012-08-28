@@ -74,6 +74,14 @@ jQuery(function() {
     jQuery('.wymeditor').wymeditor();
 });
 
+//overlay
+$(document).ready(function() {
+
+
+
+    $("img[rel]").overlay();
+});
+
 $(document).ready(function() {
     $(".services").hover(
         function () {
@@ -128,6 +136,20 @@ $(document).ready(function() {
 
 
 
+/*************************************************
+    /*    handle carousel
+  /***********************************************/
+$(document).ready(function(){
+						   
+    // This initialises carousels on the container elements specified, in this case, accordion1.
+	 $('#accordion-1').easyAccordion({ 
+         autoStart: true, 
+         slideInterval: 3000
+ });
+	 $('#accordion-1').fadeIn('slow');
+});
+
+
 
 
 
@@ -139,7 +161,7 @@ $(document).ready(function() {
 ************************************************/
 $(document).ready(function(){
     
-    $("#sidebox img").hover(
+    $(".boxesFront img").hover(
         function() {
         
             $(this).stop().animate({

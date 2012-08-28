@@ -14,7 +14,7 @@ Title* <br/><?=form_input('title', $row->title)?><br/>
 
 
  <?php if($row->news_image != NULL) { ?>
-<img src="https://s3-eu-west-1.amazonaws.com/clubwoodham/<?=$row->news_image?>" style="padding:10px 10px 10px 0;" width="150px">
+<img src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/<?=$row->news_image?>" style="padding:10px 10px 10px 0;" width="150px">
 <?php } ?>
 <p class="Image">
     <?= form_label('Image') ?> (not required field)<br/>
@@ -29,7 +29,11 @@ Title* <br/><?=form_input('title', $row->title)?><br/>
 
         <?php
         $options = array(
-            'gallery' => 'gallery'
+           'portable' => 'Portable',
+            'modular' => 'Modular',
+            'roadshows' => 'Roadshows',
+            'custom_build' => 'Custom Build',
+            'outdoor_exhibitions' => 'Outdoor Exhibitions'
         );
         ?>
     <?= form_dropdown('gallery', $options, $row->gallery) ?>

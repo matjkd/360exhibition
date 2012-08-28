@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "welcome";
+$route['access360'] = '/welcome/home';
 $route['about'] = '/welcome/home';
 $route['contact'] = '/welcome/home';
 $route['menus'] =  '/welcome/home';
@@ -56,15 +57,16 @@ $route['squash'] = '/welcome/home';
 $route['seniors'] = '/welcome/home';
 $route['class-descriptions'] = '/welcome/home';
 $route['membership'] = '/welcome/home';
-$route['creche'] = '/welcome/home';
+$route['what_we_do'] = '/welcome/home';
 $route['kids-parties'] = '/welcome/home';
 $route['fit-kids'] = '/welcome/home';
-$route['junior-programme'] = '/welcome/home';
-$route['juniors'] = '/welcome/home';
-$route['circuit-gym'] = '/welcome/home';
-$route['goals'] = '/welcome/home';
-$route['circuit-gym-membership'] = '/welcome/home';
-$route['personal-training'] = '/welcome/home';
+$route['case-studies'] = '/welcome/home';
+$route['outdoor-exhibitions'] = '/welcome/home';
+$route['custom-build'] = '/welcome/home';
+$route['roadshows'] = '/welcome/home';
+$route['modular'] = '/welcome/home';
+$route['portable'] = '/welcome/gallery';
+$route['portfolio'] = '/welcome/home';
 
 $route['404_override'] = '';
 

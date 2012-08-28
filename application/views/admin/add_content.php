@@ -37,14 +37,11 @@ if (!isset($category)) {
 
         <?php
         $options = array(
-            'driveways' => 'driveways',
-            'landscapes' => 'Landscapes',
-            'outdoor_buildings' => 'Outdoor Buildings',
-            'patios' => 'Patios',
-            'ponds_and_pools' => 'Ponds and Pools',
-            'wallsgatesrailings' => 'Walls Gates Railings',
-            'artists_impressions' => 'Artists Impressions',
-              'orangeries' => 'Orangeries',
+            'portable' => 'Portable',
+            'modular' => 'Modular',
+            'roadshows' => 'Roadshows',
+            'custom_build' => 'Custom Build',
+            'outdoor_exhibitions' => 'Outdoor Exhibitions'
         );
         ?>
     <?= form_dropdown('gallery', $options) ?>
