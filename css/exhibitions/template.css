@@ -90,8 +90,8 @@ height:100%;
 }
 .boxesFront {
 	
-	height:150px;
-	
+	height:140px;
+	padding-top:10px;
 	margin-left:10px;
 	margin-right:10px;
 }
