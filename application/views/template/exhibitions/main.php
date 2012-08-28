@@ -16,6 +16,8 @@
         <input type="hidden" id="baseurl" value="<?= base_url() ?>"/>
         <div id="mainContainer" class="container">
        
+       
+       <?php if(isset($hide_top) && $hide_top == 1) { } else {?>
             <div id="" class="one-third column">
 
 <div class="boxesFront ">LOGO</div>
@@ -30,26 +32,33 @@
 
             </div>
             
+            <?php }?>
+            
+            
+            
+            
 
 
             <div id="container" >
 
-                <?php if (isset($slideshow_active) && $slideshow_active != NULL) { ?>    
-                    <?= $this->load->view('slideshow/slideshow') ?>
+                <?php if (isset($slideshow) && $slideshow != NULL) { ?>    
+                    <?= $this->load->view('slideshow/'.$slideshow.'/picture') ?>
                 <?php } ?>
               
-                    <div class="ten columns">
+                <div class="one-third  column">
+                        <?php if(isset($sidebox) && $sidebox != NULL) { ?>
+                        
+                        
+                        <?=$this->load->view($sidebox)?>
+                        <?php } ?>
+                    </div>
+                    <div class="two-third  column">
 
   <?= $this->load->view('global/alert') ?>   
                         <?= $this->load->view($main_content) ?>   
                     </div>
 
-                    <div class="six columns">
-
-                        <?php if(isset($sidebox) && $sidebox != NULL) { ?>
-                        <?=$this->load->view('sidebox/'.$sidebox)?>
-                        <?php } ?>
-                    </div>
+                  
                
 
             </div> 

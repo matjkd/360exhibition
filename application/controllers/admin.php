@@ -97,6 +97,23 @@ class Admin extends MY_Controller {
             redirect("admin/edit/$id");
         }
     }
+    function edit_case_study() {
+    
+    
+    	$id = $this->uri->segment(3);
+    	$data['menu'] = $id;
+    	$data['page'] = $id;
+    	$data['content'] = $this->content_model->get_content('admin');
+    	$data['case'] = $this->content_model->get_case_id($id);
+    	$data['captcha'] = $this->captcha_model->initiate_captcha();
+    	//$data['seo_links'] = $this->content_model->get_seo_links();
+    	$data['main_content'] = "admin/edit_case_study";
+    
+    
+    
+    	$this->load->vars($data);
+    	$this->load->view('template/main');
+    }
 
     function edit_product_content() {
         $id = $this->uri->segment(3);

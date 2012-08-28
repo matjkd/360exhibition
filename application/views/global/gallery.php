@@ -71,6 +71,7 @@ if($content != NULL )  {
 
 ?>
 
+
 <div id="triggers" >
     <ul class="<?=$sortclass?>">
 <?php foreach($content as $row):?>

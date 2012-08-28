@@ -1,5 +1,5 @@
 <div class="one-third column colourContainer">
-	<div class="boxesFront green1"></div>
+	<div class="boxesFront green1"><a href="<?=base_url()?>portable"><img src="<?=base_url()?>images/icons/facebook_32.png"/></a></div>
 <h4>Portable</h4>
 </div>
 

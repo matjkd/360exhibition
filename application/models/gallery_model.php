@@ -75,7 +75,7 @@ class Gallery_model extends CI_Model {
     	$this->gallery_path_url = base_url() . 'images/temp/';
     
     	if($field === 0) {
-    		$field = "image";
+    		$field = "image_1";
     	}
     	else {
     		$field = $field;

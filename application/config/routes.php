@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "welcome";
+$route['access360'] = '/welcome/home';
 $route['about'] = '/welcome/home';
 $route['contact'] = '/welcome/home';
 $route['menus'] =  '/welcome/home';
@@ -64,7 +65,8 @@ $route['outdoor-exhibitions'] = '/welcome/home';
 $route['custom-build'] = '/welcome/home';
 $route['roadshows'] = '/welcome/home';
 $route['modular'] = '/welcome/home';
-$route['portable'] = '/welcome/home';
+$route['portable'] = '/welcome/gallery';
+$route['portfolio'] = '/welcome/home';
 
 $route['404_override'] = '';
 

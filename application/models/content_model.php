@@ -120,6 +120,16 @@ class Content_model extends CI_Model {
     	$insert = $this->db->insert('case_studies', $form_data);
     	return $insert;
     }
+    function get_case_id($id) {
+    
+    	$this->db->where('case_id', $id);
+    	$query = $this->db->get('case_studies');
+    	if ($query->num_rows == 1)
+    		; {
+    		return $query->result();
+    	}
+    }
+    
     function update_case_study($id) {
     
     		
@@ -135,6 +145,13 @@ class Content_model extends CI_Model {
     	$this->db->where('case_id', $id);
     	$update = $this->db->update('case_studies', $form_data);
     	return $update;
+    }
+    
+    function get_case_studies() {
+    	$query = $this->db->get('case_studies');
+    	if ($query->num_rows > 0) {
+    		return $query->result();
+    	}
     }
     /**
      *

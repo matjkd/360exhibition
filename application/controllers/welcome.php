@@ -15,7 +15,7 @@
       if ($segment_active != NULL) {
         $data['menu'] = $this->uri->segment(2);
       } else {
-        $data['menu'] = 'home';
+        $data['menu'] = 'access360';
       }
       
       $data['news'] = $this->content_model->get_content_cat('news');
@@ -38,14 +38,14 @@
         $data['message'] = $this->session->flashdata('message');
       }
       
-      $data['slideshow'] = 'header/slideshow';
+    //  $data['slideshow'] = 'header/slideshow';
       $this->load->vars($data);
       $this->load->view('template/main');
     }
     
     function get_content_data($menu) {
       $data['content'] = $this->content_model->get_content($menu);
-      
+      $data['case_studies'] = $this->content_model->get_case_studies();
       foreach ($data['content'] as $row):
                
                $data['title'] = $row->title;
@@ -56,6 +56,7 @@
                $data['meta_description'] = $row->meta_keywords;
                $data['slideshow'] = $row->slideshow;
                $data['content_id'] = $row->content_id;
+               $data['hide_top'] = $row->hide_top;
                
                endforeach;
       
@@ -97,12 +98,18 @@
       $data['message'] = $this->session->flashdata('message');
     }
     
-    $data['slideshow'] = 'header/slideshow';
+    //$data['slideshow'] = 'header/slideshow';
     $this->load->vars($data);
     $this->load->view('template/main');
   }
   
-  function gallery($gallery) {
+  function gallery() {
+  	$segment_active = $this->uri->segment(3);
+  	if ($segment_active != NULL) {
+  		$gallery = $this->uri->segment(3);
+  	} else {
+  		$gallery = 'portable';
+  	}
     $data['content'] = $this->content_model->get_gallery($gallery);
     if ($data['content'] != NULL) {
       foreach ($data['content'] as $row):
@@ -110,7 +117,7 @@
                if ($row->title != NULL) {
                  $data['title'] = $row->title;
                }
-               $data['sidebox'] = $row->sidebox;
+               $data['sidebox'] = 'extra/systems_left';
                
                if ($row->meta_title != NULL) {
                  $data['metatitle'] = $row->meta_title;
