@@ -42,6 +42,19 @@ class Gallery_model extends CI_Model {
         $this->load->library('image_lib', $config);
         $this->image_lib->resize();
         $this->image_lib->clear();
+        
+        
+        $config2 = array(
+        		'source_image' => $image_data['full_path'],
+        		'new_image' => $this->gallery_path . 'medium',
+        		'maintain_ratio' => true,
+        		'width' => 675,
+        		'height' => 500
+        );
+        
+         $this->image_lib->initialize($config2);
+        $this->image_lib->resize();
+        $this->image_lib->clear();
     }
     
     function upload_attachment() {

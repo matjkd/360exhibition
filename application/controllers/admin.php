@@ -315,10 +315,26 @@ class Admin extends MY_Controller {
                 //echo "Something went wrong while uploading your file... sorry.";
                 $this->session->set_flashdata('message', 'News Added, but your file did not upload');
             }
+            
+            //upload medium
+            $mediumlocation = base_url() . 'images/temp/medium/' . $fileName;
+            $newmediumfilename = "medium_" . $fileName;
+            
+            
+            $newmediumfile = file_get_contents($mediumlocation, true);
+            
+            if ($this->s3->putObject($newmediumfile, $this->bucket, $newmediumfilename, S3:: ACL_PUBLIC_READ)) {
+            	//echo "We successfully uploaded your file.";
+            	$this->session->set_flashdata('message', 'News Added and file uploaded successfully');
+            } else {
+            	//echo "Something went wrong while uploading your file... sorry.";
+            	$this->session->set_flashdata('message', 'News Added, but your file did not upload');
+            }
 //delete files from server
             $this->gallery_path = "./images/temp";
             unlink($this->gallery_path . '/' . $fileName . '');
             unlink($this->gallery_path . '/thumbs/' . $fileName . '');
+            unlink($this->gallery_path . '/medium/' . $fileName . '');
         } else {
 
             $this->session->set_flashdata('message', 'News Added');

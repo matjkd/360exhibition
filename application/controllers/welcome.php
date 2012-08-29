@@ -104,13 +104,13 @@ class Welcome extends MY_Controller {
 	}
 
 	function gallery() {
-		$segment_active = $this->uri->segment(2);
+		$segment_active = $this->uri->segment(1);
 		if ($segment_active != NULL) {
-			$gallery = $this->uri->segment(2);
+			$gallery = $this->uri->segment(1);
 		} else {
 			$gallery = 'portable';
 		}
-		 
+		
 		//get the content based on the menu, content now gets all the gallery items
 		$data['baseContent'] = $this->content_model->get_content($gallery);
 		

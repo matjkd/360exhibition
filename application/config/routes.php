@@ -61,10 +61,10 @@ $route['what_we_do'] = '/welcome/home';
 $route['kids-parties'] = '/welcome/home';
 $route['fit-kids'] = '/welcome/home';
 $route['case-studies'] = '/welcome/home';
-$route['outdoor-exhibitions'] = '/welcome/home';
-$route['custom-build'] = '/welcome/home';
-$route['roadshows'] = '/welcome/home';
-$route['modular'] = '/welcome/home';
+$route['outdoor'] = '/welcome/gallery';
+$route['custom_build'] = '/welcome/gallery';
+$route['roadshow'] = '/welcome/gallery';
+$route['modular'] = '/welcome/gallery';
 $route['portable'] = '/welcome/gallery';
 $route['portfolio'] = '/welcome/home';
 

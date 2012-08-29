@@ -27,7 +27,7 @@
             
              <div id="" class="two-thirds column">
 
-             <?php if($titleImage == NULL) {
+             <?php if(!isset($titleImage) || $titleImage == NULL) {
              $title = "frontTitle.png";
              } else {
              	$title = $titleImage;
