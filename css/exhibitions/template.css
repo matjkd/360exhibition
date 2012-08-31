@@ -726,3 +726,25 @@ ul.subnav li a{
 
     border-top: solid 0px #222;
 }
+.admin_menu_container {
+    background:#444;
+    border-bottom:4px solid #222;
+    display:block;
+    position:relative;
+    clear:both;
+}
+.admin_menu {
+    color:#eee;
+    background:#444;
+    width:960px;
+    margin:0 auto;
+    padding:3px 0;
+    font-size: 11px;
+    text-transform: uppercase;
+
+}
+.admin_menu a {
+    padding:9px 10px 9px 0;
+    color: #eee;
+    text-decoration: none;
+}

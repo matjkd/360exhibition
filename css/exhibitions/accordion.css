@@ -107,7 +107,7 @@ dd p {
 #accordion-1 dt.active {
 	cursor: pointer;
 	color: #fff;
-	background: #ca3301 0 0 no-repeat;
+	background: #8680bc 0 0 no-repeat;
 }
 
 #accordion-1 dt.hover {

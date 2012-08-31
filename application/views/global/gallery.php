@@ -11,7 +11,7 @@
 	/* styling */
 	background-color:#333;
 	
-	width:675px;	
+		
 	min-height:200px;
 	border:1px solid #666;
 	
@@ -37,7 +37,13 @@
 		margin:5px;
 		font-size:11px;
 		color:#fff;
-		width:675px;
+		
+	}
+	
+	.details a{
+		
+		color:#fff;
+		
 	}
 	
 	.details h3 {
@@ -48,15 +54,26 @@
 	
                 
                 #triggers img{
-                
+                border:1px solid #000;
                 float:left;
-                margin:15px;
+                margin:0px 0px 2px 30px;
         }
  .sortable { list-style-type: none; margin: 0; padding: 0; }
 	.sortable li {  float: left; }
         
          .notsortable { list-style-type: none; margin: 0; padding: 0; }
 	.notsortable li {  float: left; }
+	
+	.thumbtitle {
+	clear:both;
+	margin-left:30px;
+	margin-bottom:10px;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	text-align:center;
+	margin-top:5px;
+	
+	}
 	</style>
 <?php 
 $is_logged_in = $this->session->userdata('is_logged_in');
@@ -76,7 +93,8 @@ if($content != NULL )  {
     <ul class="<?=$sortclass?>">
 <?php foreach($content as $row):?>
         <li id="gallery_<?=$row->content_id?>">
-<img  class="thumbnails"  style="width:200px; height: 133px;" alt="<?=$row->title?>" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/thumb_<?=$row->news_image?>" rel="#img_<?=$row->content_id?>"/>
+<img  class="thumbnails"  style="width:170px; height: 93px;" alt="<?=$row->title?>" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/thumb_<?=$row->news_image?>" rel="#img_<?=$row->content_id?>"/><br/>
+<div class="thumbtitle"><?=$row->title?></div>
         </li>
 <?php endforeach; ?>
 </ul>
@@ -88,7 +106,7 @@ if($content != NULL )  {
 <div class="simple_overlay" id="img_<?=$row->content_id?>">
 
 	<!-- large image -->
-	<img style="width:675px" alt="<?=$row->title?>" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/<?=$row->news_image?>" />
+	<img  alt="<?=$row->title?>" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/medium_<?=$row->news_image?>" />
 
 	<!-- image details -->
 	<div class="details">
