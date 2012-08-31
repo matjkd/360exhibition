@@ -191,7 +191,48 @@ $(document).ready(function(){
     
 });
 
-
+/***********************************************/
+/*
+* MouseOver hover thing for sidebox buttons on gallery
+*
+*
+************************************************/
+$(document).ready(function(){
+    
+    $(".systemsMenu img").hover(
+        function() {
+        
+            $(this).stop().animate({
+                opacity: 0.5
+             
+              
+            },
+            150
+            );
+               
+            $(this).closest('div').next().find('.pointer').stop().animate({
+            	opacity:'+=0.5'
+            });        
+        },
+        function() {
+        
+            $(this).stop().animate({
+                
+                opacity: 1
+               
+                
+            
+            },
+            150
+            );
+            $(this).closest('div').next().find('.pointer').stop().animate({
+            	opacity:'0'
+            }); 
+           
+        }
+        );
+    
+});
 /***********************************************/
 /*
  * Drop Down Menu

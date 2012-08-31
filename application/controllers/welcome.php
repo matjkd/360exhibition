@@ -129,7 +129,7 @@ class Welcome extends MY_Controller {
 
 		if ($data['content'] != NULL) {
 			foreach ($data['content'] as $row):
-			 
+			$data['gallery'] = $row->gallery;
 
 			if ($row->title != NULL) {
 				$data['title'] = $row->title;
@@ -147,6 +147,7 @@ class Welcome extends MY_Controller {
 			if ($row->meta_desc != NULL) {
 				$data['meta_description'] = $row->meta_desc;
 			}
+			
 			 
 			$data['slideshow_active'] = $row->slideshow;
 			endforeach;
@@ -195,7 +196,7 @@ class Welcome extends MY_Controller {
 		$id = 'login';
 		$data['content'] = $this->content_model->get_content($id);
 		$data['main_content'] = "user/login_form";
-		$data['title'] = "Login to Eagle";
+		$data['title'] = "Login to Exhibitions";
 
 		$data['page'] = "login";
 		$this->load->vars($data);

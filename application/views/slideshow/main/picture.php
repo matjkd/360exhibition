@@ -9,17 +9,17 @@
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront lightblue"><a href="<?=base_url()?>roadshows"><img height="130px" src="<?=base_url()?>images/icons/roadshowswhite.png"/></a></div>
+	<div class="boxesFront lightblue"><a href="<?=base_url()?>roadshow"><img height="130px" src="<?=base_url()?>images/icons/roadshowswhite.png"/></a></div>
 	<h4>Roadshows</h4>
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront pink1"><a href="<?=base_url()?>custombuild"><img height="130px" src="<?=base_url()?>images/icons/custombuildwhite.png"/></a></div>
+	<div class="boxesFront pink1"><a href="<?=base_url()?>custom_build"><img height="130px" src="<?=base_url()?>images/icons/custombuildwhite.png"/></a></div>
 	<h4>Custom Build</h4>
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront orange1"><a href="<?=base_url()?>outdoorexhibitions"><img height="130px" src="<?=base_url()?>images/icons/outdoorwhite.png"/></a></div>
+	<div class="boxesFront orange1"><a href="<?=base_url()?>outdoor"><img height="130px" src="<?=base_url()?>images/icons/outdoorwhite.png"/></a></div>
 	<h4>Outdoor Exhibitions</h4>
 </div>
 

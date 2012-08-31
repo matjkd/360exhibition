@@ -14,6 +14,19 @@
 
     <body>
         <input type="hidden" id="baseurl" value="<?= base_url() ?>"/>
+        
+        
+          <?php $is_logged_in = $this->session->userdata('is_logged_in');
+		$role = $this->session->userdata('role');
+		if($is_logged_in != NULL && $role < 2)
+		{
+		echo "<div class='admin_menu_container'><div class='admin_menu'>";
+                    echo anchor('/admin/add_gallery_content', 'Add Gallery Item');
+                  echo anchor('/admin/add_case_study', 'Add Case Study');
+                       echo "</div></div>";
+		}
+                
+                ?>
         <div id="mainContainer" class="container">
        
        
@@ -63,7 +76,7 @@
                         <?=$this->load->view($sidebox)?>
                         <?php } ?>
                     </div>
-                    <div class="two-third  column">
+                    <div class="two-thirds  column">
 
   <?= $this->load->view('global/alert') ?>   
                         <?= $this->load->view($main_content) ?>   

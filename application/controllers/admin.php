@@ -53,7 +53,7 @@ class Admin extends MY_Controller {
         $id = $this->uri->segment(3);
         $data['menu'] = $id;
         $data['page'] = $id;
-        $data['sidebox'] = '/attachments';
+        $data['sidebox'] = '/sidebox/attachments';
         $data['content'] = $this->content_model->get_content_id($id);
         $data['attachments'] = $this->content_model->get_attachments($id);
         $data['captcha'] = $this->captcha_model->initiate_captcha();
@@ -339,6 +339,92 @@ class Admin extends MY_Controller {
 
             $this->session->set_flashdata('message', 'News Added');
         }
+    }
+    
+    function update_case_study() {
+    	$this->form_validation->set_rules('title', 'Title', 'trim|max_length[255]|required');
+    	$this->form_validation->set_rules('content', 'Content', 'trim');
+    
+    	$id = $this->input->post('case_id');
+    
+    	if ($this->form_validation->run() == FALSE) { // validation hasn'\t been passed
+    		echo "validation error";
+    	} else { // passed validation proceed to post success logic
+    		if ($this->content_model->update_case_study($id)) { // the information has therefore been successfully saved in the db
+    			//now process the image
+    			// run insert model to write data to db
+    			//upload file
+    			//retrieve uploaded file
+    				
+    
+    			$this->load->library('image_lib');
+    
+    			//check image_side field is not null
+    			$image_side_value =  $_FILES['image_side']['name'];
+    			echo $image_side_value;
+    			if($image_side_value != NULL) {
+    				echo " image selected ";
+    				$this->upload_case_image($id, 'image_side', 150);
+    			} else {
+    				echo " no image side ";
+    			}
+    
+    
+    			//check image_1 field is not null
+    
+    			$image_side_value =  $_FILES['image_1']['name'];
+    			echo $image_side_value;
+    			if($image_side_value != NULL) {
+    				echo " image selected ";
+    					
+    				$this->upload_case_image($id, 'image_1', 110);
+    			} else {
+    				echo " no image 1";
+    			}
+    
+    
+    			//check image_2 field is not null
+    			$image_side_value =  $_FILES['image_2']['name'];
+    			echo $image_side_value;
+    			if($image_side_value != NULL) {
+    				echo " image selected ";
+    					
+    				$this->upload_case_image($id, 'image_2', 110);
+    			} else {
+    				echo " no image 2";
+    			}
+    
+    
+    			//check image_3 field is not null
+    			$image_side_value =  $_FILES['image_3']['name'];
+    			echo $image_side_value;
+    			if($image_side_value != NULL) {
+    				echo " image selected ";
+    					
+    				$this->upload_case_image($id, 'image_3', 110);
+    			} else {
+    				echo " no image 3";
+    			}
+    
+    
+    			//check pdf field is not null
+    
+    			$pdf_value =  $_FILES['pdf']['name'];
+    			echo $pdf_value;
+    			if($pdf_value != NULL) {
+    				$this->upload_pdf($id);
+    				echo " pdf";
+    			} else {
+    				echo " no pdf";
+    			}
+    
+    
+    			redirect('/admin/edit_case_study/'.$id);   // or whatever logic needs to occur
+    		} else {
+    			echo 'An error occurred saving your information. Please try again later';
+    			// Or whatever error handling is necessary
+    		}
+    	}
     }
     
     function upload_case_image($id = 0, $field = 0, $height = 110) {

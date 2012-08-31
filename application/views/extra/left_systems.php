@@ -1,84 +1,158 @@
 <style type="text/css">
-
 .systemsMenu {
-float:left;
-clear:left;
-width:120px;
-padding-left:20px;
+	float: left;
+	clear: left;
+	width: 120px;
+	padding-left: 20px;
 }
-.systemsMenu img {
 
-width:120px;
+.systemsMenu img {
+	width: 120px;
 }
 
 .systemsMenuText {
-float:left;
+	float: left;
+}
+
+.left-arrow,.right-arrow {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background: #ddd;
+	margin-top:45px;
+}
+
+.systemPage {
+	float: left;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	margin-top:45px;
+}
+.pointer {
+position:absolute;
+left:190px;
+}
+.pointerSelected {
+position:absolute;
+left:190px;
 }
 </style>
 
 <div class="systemsMenu">
 
-<a href="<?=base_url()?>portable"><img  src="<?=base_url()?>images/icons/PortableSmall.png"/></a>
+	<a href="<?=base_url()?>portable"><img
+		src="<?=base_url()?>images/icons/PortableSmall.png" /> </a>
 
 </div>
 
 
-<div  class="systemsMenuText">
+<div class="systemsMenuText">
+	<?php if($gallery == "portable") {?>
+	<div class="pointerSelected" style="display: block; opacity:1;">
+		<?php } else {?>
+		<div class="pointer"  style="display: block;  opacity:0;">
+			<?php }?>
+			<div class="left-arrow"><</div>
 
- < PORTABLE >
+			<div class="systemPage">PORTABLE</div>
 
-</div>
+			<div class="right-arrow">></div>
 
+		</div>
 
+	</div>
 
-<div class="systemsMenu">
+	<div class="systemsMenu">
 
-<a href="<?=base_url()?>modular"><img src="<?=base_url()?>images/icons/modularSmall.png"/></a>
+		<a href="<?=base_url()?>modular"><img
+			src="<?=base_url()?>images/icons/modularSmall.png" /> </a>
 
-</div>
-
-
-<div  class="systemsMenuText">
-
- < MODULAR >
-
-</div>
-
-<div class="systemsMenu">
-
-<a href="<?=base_url()?>roadshow"><img  src="<?=base_url()?>images/icons/roadshowsSmall.png"/></a>
-
-</div>
+	</div>
 
 
-<div  class="systemsMenuText">
+	<div class="systemsMenuText">
+		<?php if($gallery == "modular") {?>
+		<div class="pointerSelected" style="display: block; opacity:1;">
+		<?php } else {?>
+		<div class="pointer"  style="display: block;  opacity:0;">
+				<?php }?>
+				<div class="left-arrow"><</div>
 
- < ROADSHOWS >
+				<div class="systemPage">MODULAR</div>
 
-</div>
+				<div class="right-arrow">></div>
 
-<div class="systemsMenu">
+			</div>
+		</div>
 
-<a href="<?=base_url()?>custombuild"><img  src="<?=base_url()?>images/icons/custombuildSmall.png"/></a>
+		<div class="systemsMenu">
 
-</div>
+			<a href="<?=base_url()?>roadshow"><img
+				src="<?=base_url()?>images/icons/roadshowsSmall.png" /> </a>
 
-
-<div  class="systemsMenuText">
-
- < CUSTOM BUILD >
-
-</div>
-
-<div class="systemsMenu">
-
-<a href="<?=base_url()?>outdoor"><img  src="<?=base_url()?>images/icons/outdoorSmall.png"/></a>
-
-</div>
+		</div>
 
 
-<div  class="systemsMenuText">
+		<div class="systemsMenuText">
+			<?php if($gallery == "roadshow") {?>
+			<div class="pointerSelected" style="display: block; opacity:1;">
+		<?php } else {?>
+		<div class="pointer"  style="display: block;  opacity:0;">
+					<?php }?>
+					<div class="left-arrow"><</div>
 
- < OUTDOOR EXHIBITIONS >
+					<div class="systemPage">ROADSHOWS</div>
 
-</div>
+					<div class="right-arrow">></div>
+				</div>
+
+			</div>
+
+			<div class="systemsMenu">
+
+				<a href="<?=base_url()?>custom_build"><img
+					src="<?=base_url()?>images/icons/custombuildSmall.png" /> </a>
+
+			</div>
+
+
+			<div class="systemsMenuText">
+				<?php if($gallery == "custom_build") {?>
+				<div class="pointerSelected" style="display: block; opacity:1;">
+		<?php } else {?>
+		<div class="pointer"  style="display: block;  opacity:0;">
+						<?php }?>
+						<div class="left-arrow"><</div>
+
+						<div class="systemPage">CUSTOM BUILD</div>
+
+						<div class="right-arrow">></div>
+
+					</div>
+				</div>
+				
+				
+				
+				<div class="systemsMenu">
+
+					<a href="<?=base_url()?>outdoor"><img
+						src="<?=base_url()?>images/icons/outdoorSmall.png" /> </a>
+
+				</div>
+
+
+				<div class="systemsMenuText">
+					<?php if($gallery == "outdoor") {?>
+					<div class="pointerSelected" style="display: block; opacity:1;">
+		<?php } else {?>
+		<div class="pointer"  style="display: block;  opacity:0;">
+							<?php }?>
+							<div class="left-arrow"><</div>
+
+							<div class="systemPage">OUTDOOR EXHIBITIONS</div>
+
+							<div class="right-arrow">></div>
+
+						</div>
+					</div>	
