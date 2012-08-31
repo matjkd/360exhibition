@@ -14,16 +14,16 @@
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront pink1"><a href="<?=base_url()?>portable"><img height="130px" src="<?=base_url()?>images/icons/custombuildwhite.png"/></a></div>
+	<div class="boxesFront pink1"><a href="<?=base_url()?>custombuild"><img height="130px" src="<?=base_url()?>images/icons/custombuildwhite.png"/></a></div>
 	<h4>Custom Build</h4>
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront orange1"><a href="<?=base_url()?>portable"><img height="130px" src="<?=base_url()?>images/icons/outdoorwhite.png"/></a></div>
+	<div class="boxesFront orange1"><a href="<?=base_url()?>outdoorexhibitions"><img height="130px" src="<?=base_url()?>images/icons/outdoorwhite.png"/></a></div>
 	<h4>Outdoor Exhibitions</h4>
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront purple1"><a href="<?=base_url()?>portable"><img height="130px" src="<?=base_url()?>images/icons/access360white.png"/></a></div>
+	<div class="boxesFront purple1"><a href="<?=base_url()?>portfolio"><img height="130px" src="<?=base_url()?>images/icons/access360white.png"/></a></div>
 	<h4>Case Studies</h4>
 </div>

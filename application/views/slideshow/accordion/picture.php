@@ -34,7 +34,7 @@
 		
 		
 		<div  style="float:left;">
-    <a href="<?=base_url()?>"><img src="<?=base_url()?>images/experientialLogoSmaller.png"/></a>
+    <a href="<?=base_url()?>"><img style="padding:10px;" width="180px" src="<?=base_url()?>images/icons/exhibitionsLogo.png"/></a>
    </div>
 <div style="clear:both;"></div>
 			<div id="accordion-heading"><h2><?=$row->case_title?></h2></div>

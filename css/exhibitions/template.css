@@ -73,6 +73,13 @@ height:100%;
 	colour:#999999;
 	font-size:0.8em;
 }
+.mainTitle {
+	text-align:right;
+	
+}
+.mainTitle img {
+	padding-top:20px;
+}
 
 .colourContainer h4 {
 	color:#b2aed4;

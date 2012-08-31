@@ -20,16 +20,27 @@
        <?php if(isset($hide_top) && $hide_top == 1) { } else {?>
             <div id="" class="one-third column">
 
-<div class="boxesFront ">LOGO</div>
+<div class="boxesFront "><img height="130px" src="<?=base_url()?>images/icons/exhibitionsLogo.png"/></div>
 
 
             </div>
             
              <div id="" class="two-thirds column">
 
-<div class="boxesFront ">TITLE</div>
+             <?php if(!isset($titleImage) || $titleImage == NULL) {
+             $title = "frontTitle.png";
+             } else {
+             	$title = $titleImage;
+             }
+             	?>
+             
+<div class="boxesFront mainTitle"><img height="95px" src="<?=base_url()?>images/icons/<?=$title?>"/></div>
 
 
+            </div>
+            
+            <div style="clear:both; height:30px;">
+            
             </div>
             
             <?php }?>
@@ -44,7 +55,7 @@
                 <?php if (isset($slideshow) && $slideshow != NULL) { ?>    
                     <?= $this->load->view('slideshow/'.$slideshow.'/picture') ?>
                 <?php } ?>
-              
+             
                 <div class="one-third  column">
                         <?php if(isset($sidebox) && $sidebox != NULL) { ?>
                         
