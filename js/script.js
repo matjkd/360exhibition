@@ -231,6 +231,44 @@ $(document).ready(function(){
 
 /***********************************************/
 /*
+* MouseOver hover and click for sidebox contact slider
+*
+*
+************************************************/
+var contactbox = $("#contactSideBox");
+
+$(document).ready(function(){
+	
+	contactbox.click(
+	function() {
+		$(this).stop().animate({
+           opacity:"0.9",
+         right: "0"
+          
+        })
+	}		
+	
+	);
+	
+	contactbox.mouseleave(
+			function() {
+				$(this).stop().animate({
+		           opacity:"0.5",
+		         right: "-300"
+		          
+		        })
+			}		
+			
+			);
+	
+	
+	
+	
+	
+});
+
+/***********************************************/
+/*
 * MouseOver hover thing for sidebox buttons on gallery
 *
 *

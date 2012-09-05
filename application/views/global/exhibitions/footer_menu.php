@@ -26,9 +26,14 @@
         <h4><a id="portfolio-menu" href="<?= base_url() ?>contact">Contact Us</a></h4>
 
     </div>
+     <div style="position: absolute; right: 0; top: 0px;">
+				<img src="<?=base_url()?>images/icons/twitter.png" />
+
+				</div>
+
 </div>
 
-
+   
 <div class="boxesFooter smallprint" >
 
     Terms and Conditions | Site Map | Contact

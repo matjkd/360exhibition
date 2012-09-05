@@ -50,6 +50,7 @@ class Welcome extends MY_Controller {
 		 
 		$data['title'] = $row->title;
 		$data['sidebox'] = $row->sidebox;
+		$data['sidebox_pos'] = $row->sidebox_pos;
 		$data['metatitle'] = $row->meta_title;
 		$data['slideshow_active'] = $row->slideshow;
 		$data['meta_keywords'] = $row->meta_desc;
