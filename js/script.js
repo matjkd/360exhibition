@@ -193,6 +193,44 @@ $(document).ready(function(){
 
 /***********************************************/
 /*
+* MouseOver hover thing for menus
+*
+*
+************************************************/
+$(document).ready(function(){
+    
+    $(".menubutton").hover(
+        function() {
+        
+            $(this).stop().animate({
+                opacity: 0.8
+             
+              
+            },
+            150
+            );
+               
+             
+        },
+        function() {
+        
+            $(this).stop().animate({
+                
+                opacity: 1
+               
+                
+            
+            },
+            150
+            );
+           
+        }
+        );
+    
+});
+
+/***********************************************/
+/*
 * MouseOver hover thing for sidebox buttons on gallery
 *
 *

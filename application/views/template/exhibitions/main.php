@@ -33,7 +33,7 @@
        <?php if(isset($hide_top) && $hide_top == 1) { } else {?>
             <div id="" class="one-third column">
 
-<div class="boxesFront "><img height="130px" src="<?=base_url()?>images/icons/exhibitionsLogo.png"/></div>
+<div class="boxesFront "><a href="<?=base_url()?>"><img height="130px" src="<?=base_url()?>images/icons/exhibitionsLogo.png"/></a></div>
 
 
             </div>
@@ -97,6 +97,7 @@
           
             
         <!--! end of #container -->
+          <?= $this->load->view('global/exhibitions/contact_side') ?>
         <?= $this->load->view('global/footer') ?>
 
     </body>

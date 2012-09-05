@@ -18,25 +18,22 @@
 	float: left;
 	width: 30px;
 	height: 30px;
-	background: #ddd;
+	
 	margin-top:45px;
 }
 
 .systemPage {
 	float: left;
-	width: 100px;
+	width: 120px;
 	height: 30px;
 	text-align: center;
 	margin-top:45px;
 }
-.pointer {
+.pointer, .pointerSelected {
 position:absolute;
-left:190px;
+left:170px;
 }
-.pointerSelected {
-position:absolute;
-left:190px;
-}
+
 </style>
 
 <div class="systemsMenu">
@@ -53,11 +50,11 @@ left:190px;
 		<?php } else {?>
 		<div class="pointer"  style="display: block;  opacity:0;">
 			<?php }?>
-			<div class="left-arrow"><</div>
+			<div class="left-arrow"><img src="<?=base_url()?>images/icons/arrows/portableLeft.png"/></div>
 
 			<div class="systemPage">PORTABLE</div>
 
-			<div class="right-arrow">></div>
+			<div class="right-arrow"><img src="<?=base_url()?>images/icons/arrows/portableRight.png"/></div>
 
 		</div>
 
@@ -77,18 +74,18 @@ left:190px;
 		<?php } else {?>
 		<div class="pointer"  style="display: block;  opacity:0;">
 				<?php }?>
-				<div class="left-arrow"><</div>
+				<div class="left-arrow"><img src="<?=base_url()?>images/icons/arrows/modularLeft.png"/></div>
 
 				<div class="systemPage">MODULAR</div>
 
-				<div class="right-arrow">></div>
+				<div class="right-arrow"><img src="<?=base_url()?>images/icons/arrows/modularRight.png"/></div>
 
 			</div>
 		</div>
 
 		<div class="systemsMenu">
 
-			<a href="<?=base_url()?>roadshow"><img
+			<a href="<?=base_url()?>roadshows"><img
 				src="<?=base_url()?>images/icons/roadshowsSmall.png" /> </a>
 
 		</div>
@@ -100,11 +97,11 @@ left:190px;
 		<?php } else {?>
 		<div class="pointer"  style="display: block;  opacity:0;">
 					<?php }?>
-					<div class="left-arrow"><</div>
+					<div class="left-arrow"><img src="<?=base_url()?>images/icons/arrows/roadshowLeft.png"/></div>
 
 					<div class="systemPage">ROADSHOWS</div>
 
-					<div class="right-arrow">></div>
+					<div class="right-arrow"><img src="<?=base_url()?>images/icons/arrows/roadshowRight.png"/></div>
 				</div>
 
 			</div>
@@ -123,11 +120,11 @@ left:190px;
 		<?php } else {?>
 		<div class="pointer"  style="display: block;  opacity:0;">
 						<?php }?>
-						<div class="left-arrow"><</div>
+						<div class="left-arrow"><img src="<?=base_url()?>images/icons/arrows/customLeft.png"/></div>
 
 						<div class="systemPage">CUSTOM BUILD</div>
 
-						<div class="right-arrow">></div>
+						<div class="right-arrow"><img src="<?=base_url()?>images/icons/arrows/customRight.png"/></div>
 
 					</div>
 				</div>
@@ -148,11 +145,11 @@ left:190px;
 		<?php } else {?>
 		<div class="pointer"  style="display: block;  opacity:0;">
 							<?php }?>
-							<div class="left-arrow"><</div>
+							<div class="left-arrow"><img src="<?=base_url()?>images/icons/arrows/outdoorLeft.png"/></div>
 
 							<div class="systemPage">OUTDOOR EXHIBITIONS</div>
 
-							<div class="right-arrow">></div>
+							<div class="right-arrow"><img src="<?=base_url()?>images/icons/arrows/outdoorRight.png"/></div>
 
 						</div>
 					</div>	
