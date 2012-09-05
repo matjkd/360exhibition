@@ -26,11 +26,22 @@ height:100%;
 
 /* #Typography
 ================================================== */
-	h1, h2, h3, h4, h5, h6 {
+	 h3, h4, h6 {
 		color: #628e98;
 		font-family:  "Bevan", serif;
 		font-weight: lighter;
         }
+        
+        h1,h2 {
+	font-family: 'Oswald', sans-serif;
+}
+
+h5 {
+	font-size: 1.5em;
+	font-family: 'Oswald', sans-serif;
+	color: #CA3301;
+	margin-bottom:3px;
+}
         
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 40px; line-height: 46px; margin-bottom: 14px;}

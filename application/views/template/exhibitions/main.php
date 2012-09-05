@@ -97,6 +97,7 @@
           
             
         <!--! end of #container -->
+          <?= $this->load->view('global/exhibitions/contact_side') ?>
         <?= $this->load->view('global/footer') ?>
 
     </body>

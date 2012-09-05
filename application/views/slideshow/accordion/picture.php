@@ -2,7 +2,7 @@
 
 
 
-<div id="accordion-1" style="margin-bottom:50px; margin-top:80px; display:none;">
+<div id="accordion-1" style="margin-bottom:50px; margin-top:0px; display:none;">
 	<dl>
 	
 	<?php foreach($case_studies as $row):?>
@@ -16,7 +16,7 @@
 		<dd>
 		<div>
 		
-		<div style="position:absolute; right:0px; z-index:0;">
+		<div style="position:absolute; right:0px; z-index:0; margin-top:7px;">
 		<?php if($row->image_1 !="") {?>
 		<img height="110px"  alt="images" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/thumbs/<?=$row->image_1?>" />
 		<?php }?>
@@ -34,7 +34,7 @@
 		
 		
 		<div  style="float:left;">
-    <a href="<?=base_url()?>"><img style="padding:10px;" width="180px" src="<?=base_url()?>images/icons/exhibitionsLogo.png"/></a>
+    <a href="<?=base_url()?>"><img style="padding:10px;" width="180px" src="<?=base_url()?>images/icons/exhibitionsLogoTrimmed.png"/></a>
    </div>
 <div style="clear:both;"></div>
 			<div id="accordion-heading"><h2><?=$row->case_title?></h2></div>
@@ -43,7 +43,7 @@
 				<br /> <a href="https://s3-eu-west-1.amazonaws.com/access360site/<?=$row->pdf_link?>" target="_blank" class="more">Download a pdf</a>
 			</p></div>
 			<?php if($row->image_side !="") {?>
-			<div style="position:absolute; right:10px; top:150px; z-index:0;"><img height="150px" width="180px" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/thumbs/<?=$row->image_side?>" alt="cloud image here" /></div>
+			<div style="position:absolute; right:15px; top:150px; z-index:0;"><img height="150px" width="180px" src="https://s3-eu-west-1.amazonaws.com/<?=$this->bucket?>/thumbs/<?=$row->image_side?>" alt="cloud image here" /></div>
 			<?php }?>
 			</div>
 		</dd>

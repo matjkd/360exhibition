@@ -9,7 +9,7 @@
 </div>
 
 <div class="one-third column colourContainer">
-	<div class="boxesFront lightblue"><a href="<?=base_url()?>roadshow"><img height="130px" src="<?=base_url()?>images/icons/roadshowswhite.png"/></a></div>
+	<div class="boxesFront lightblue"><a href="<?=base_url()?>roadshows"><img height="130px" src="<?=base_url()?>images/icons/roadshowswhite.png"/></a></div>
 	<h4>Roadshows</h4>
 </div>
 

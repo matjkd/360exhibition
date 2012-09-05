@@ -8,7 +8,7 @@
     </div>
 
     <div class="menubutton">
-        <h4><span  id="about-menu"  ><a  href="http://www.access360.co.uk" target="_blank">Who are we</a></span></h4>
+        <h4><span  id="about-menu"  ><a  href="<?= base_url() ?>who_are_we" >Who are we</a></span></h4>
 
     </div>
 
