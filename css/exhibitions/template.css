@@ -15,7 +15,17 @@ height:100%;
    background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+#backgroundImage {
+	background:url('images/background.png') no-repeat;
+	position:absolute;
+	z-index:0;
+	right:-40px;
+	top:-160px;
+	width:640px;
+	height:945px;
+	margin:0 auto;
+	opacity:0.7;
+}
 @font-face { font-family: 'spinnaker';
              src: url('/fonts/Spinnaker-Regular.ttf');
 }

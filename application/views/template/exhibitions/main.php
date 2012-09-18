@@ -16,7 +16,11 @@
 
 <body>
 	<input type="hidden" id="baseurl" value="<?= base_url() ?>" />
-
+<div class="container" >
+<div id="backgroundImage">
+&nbsp; 
+</div>
+</div>
 
 	<?php $is_logged_in = $this->session->userdata('is_logged_in');
 	$role = $this->session->userdata('role');
