@@ -27,7 +27,7 @@
 
     </div>
      <div style="position: absolute; right: 0; top: 0px;">
-				<img src="<?=base_url()?>images/icons/twitter.png" />
+				<a href="http://twitter.com/access_360"><img src="<?=base_url()?>images/icons/twitter.png" /></a>
 
 				</div>
 
@@ -36,5 +36,5 @@
    
 <div class="boxesFooter smallprint" >
 
-    Terms and Conditions | Site Map | Contact
+    <a href="<?=base_url()?>terms">Terms and Conditions</a> | Site Map | <a href="<?=base_url()?>contact">Contact</a>
 </div>
