@@ -96,7 +96,7 @@
              		if($side == 'left') {?>
 
 			<div class="one-third  column">
-			&nbsp;
+		
 				<?php if(isset($sidebox) && $sidebox != NULL) { ?>
 
 

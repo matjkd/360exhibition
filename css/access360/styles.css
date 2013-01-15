@@ -1,0 +1,56 @@
+ body {
+       
+        padding-bottom: 0px;
+       
+      }
+      
+      .bodycontain {
+      	 background:#000;
+      }
+      footer {
+      	background:#fff;
+  	border-top:#f7941e solid 3px;
+      }
+      
+      
+  .logo {
+  	
+  	display:block;
+  	
+  	width:152px;
+  	height:85px;
+  	margin:40px auto;
+  	
+  }   
+  .logo img {
+  	width:152px;
+  	height:85px;
+  } 
+  .navbar-access {
+  	background:#fff;
+  	border-bottom:#f7941e solid 3px;
+  }
+
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #555;
+
+}
+
+#navcontainer ul li a:hover
+{
+color: #f7941e;
+
+}
