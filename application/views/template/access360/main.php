@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Access360</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -40,13 +40,7 @@
           </a>
          
          <div id="navcontainer">
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">News</a></li>
-<li><a href="#">About us</a></li>
-<li><a href="#">Experiential</a></li>
-<li><a href="#">Exhibitions</a></li>
-</ul>
+<?=$this->load->view('template/access360/menu')?>
 </div>
         </div>
       </div>
@@ -56,9 +50,7 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <?=$this->load->view('template/access360/hero')?>
       </div>
 
    
@@ -70,15 +62,21 @@
     </div>
    <footer>
    	<div class="container">
-        <p>&copy; Company 2012</p>
+      <?=$this->load->view('template/access360/pagefooter')?>
        </div>
       </footer>
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="<?=base_url()?>js/bootstrap.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+     <script src="<?=base_url()?>js/bootstrap.js"></script>
+     <script src="<?=base_url()?>js/plugins.js"></script>
+
+     
+     <script src="<?=base_url()?>js/parallax.js"></script>
+     <script src="<?=base_url()?>js/script.js"></script>
+
   
 
   </body>

@@ -4,12 +4,17 @@
        
       }
       
+      .hero-unit {
+      	position:relative;
+      	min-height:520px;
+      }
+      
       .bodycontain {
       	 background:#000;
       }
       footer {
       	background:#fff;
-  	border-top:#f7941e solid 3px;
+  	border-top:#8681bc solid 3px;
       }
       
       
@@ -18,17 +23,17 @@
   	display:block;
   	
   	width:152px;
-  	height:85px;
+  	height:99px;
   	margin:40px auto;
   	
   }   
   .logo img {
   	width:152px;
-  	height:85px;
+  	height:99px;
   } 
   .navbar-access {
   	background:#fff;
-  	border-bottom:#f7941e solid 3px;
+  	border-bottom:#8681bc solid 3px;
   }
 
 #navcontainer ul
@@ -51,6 +56,15 @@ color: #555;
 
 #navcontainer ul li a:hover
 {
-color: #f7941e;
+color: #8681bc;
 
+}
+
+
+.parallax-viewport {
+    position: relative;     /* relative, absolute, fixed */
+    overflow: hidden;
+}
+.parallax-layer {
+    position: absolute;
 }

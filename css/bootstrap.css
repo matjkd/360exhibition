@@ -4290,7 +4290,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   *position: relative;
   *z-index: 2;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   overflow: visible;
 }
 
@@ -5990,8 +5990,9 @@ a.badge:hover {
 }
 
 .hero-unit {
-  padding: 60px;
-  margin-bottom: 30px;
+  padding: 0px;
+  min-height:520px;
+  margin-bottom: 0px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
