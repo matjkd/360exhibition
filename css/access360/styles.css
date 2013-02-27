@@ -1,70 +1,92 @@
- body {
-       
-        padding-bottom: 0px;
-       
-      }
-      
-      .hero-unit {
-      	position:relative;
-      	min-height:520px;
-      }
-      
-      .bodycontain {
-      	 background:#000;
-      }
-      footer {
-      	background:#fff;
-  	border-top:#8681bc solid 3px;
-      }
-      
-      
-  .logo {
-  	
-  	display:block;
-  	
-  	width:152px;
-  	height:99px;
-  	margin:40px auto;
-  	
-  }   
-  .logo img {
-  	width:152px;
-  	height:99px;
-  } 
-  .navbar-access {
-  	background:#fff;
-  	border-bottom:#8681bc solid 3px;
-  }
-
-#navcontainer ul
-{
-margin: 0;
-padding: 0;
-list-style-type: none;
-text-align: center;
+body {
+font-family: "proxima-nova";
+	padding-bottom: 0px;
 }
 
-#navcontainer ul li { display: inline; }
-
-#navcontainer ul li a
-{
-text-decoration: none;
-padding: .2em 1em;
-color: #555;
-
+.hero-unit {
+	font-size:13px;
+	line-height:16px;
+	color:#eeeeee;
+	position: relative;
+	min-height: 473px;
+	background: transparent;
 }
 
-#navcontainer ul li a:hover
-{
-color: #8681bc;
-
+.bodycontain {
+	background: #000;
+	
+}
+footer {
+	background: #fff;
+	border-top: #8681bc solid 3px;
+}
+h1,h2,h3,h4,h5 {
+	font-family: "proxima-nova";
+	font-weight:300;
+	color:#8981bd;
+}
+h3 {
+	margin-top: 0px;
+	margin-bottom:10px;
+	line-height:25px;
+}
+.img-polaroid {
+	padding:2px;
+	border-radius:20px;
+	background-color: #8981bd;
 }
 
+.mainbody {
+	padding-top:150px;
+	display:none;
+	
+}
+.scroller {
+	height:300px;
+	overflow:auto;
+}
+
+.logo {
+
+	display: block;
+	width: 152px;
+	height: 99px;
+	margin: 40px auto;
+}
+.logo img {
+	width: 152px;
+	height: 99px;
+}
+.navbar-access {
+	background: #fff;
+	border-bottom: #8681bc solid 3px;
+}
+
+#navcontainer ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+#navcontainer ul li {
+	display: inline;
+}
+
+#navcontainer ul li a {
+	text-decoration: none;
+	padding: .2em 1em;
+	color: #555;
+}
+
+#navcontainer ul li a:hover {
+	color: #8681bc;
+}
 
 .parallax-viewport {
-    position: relative;     /* relative, absolute, fixed */
-    overflow: hidden;
+	position: relative; /* relative, absolute, fixed */
+	overflow: hidden;
 }
 .parallax-layer {
-    position: absolute;
+	position: absolute;
 }

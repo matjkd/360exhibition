@@ -63,11 +63,11 @@ color: inherit;
 <div id="port">
       <!-- List must be spaceless becuse <li>s are display: inline, and any spaces between them show in IE -->
       <ul class="thumbs_index index parallax-layer">
-         <li><a class="img_thumb thumb" href="#" style="background: url('http://webdev.stephband.info/jparallax/images/parallax_thumbnails/1.jpg');">item</a></li
-        ><li><a class="img_thumb thumb" href="#" style="background: url('http://webdev.stephband.info/jparallax/images/parallax_thumbnails/2.jpg');">item</a></li
-        ><li><a class="img_thumb thumb" href="#" style="background: url('http://webdev.stephband.info/jparallax/images/parallax_thumbnails/3.jpg');">item</a></li
-        ><li><a class="img_thumb thumb" href="#" style="background: url('http://webdev.stephband.info/jparallax/images/parallax_thumbnails/4.jpg');">item</a></li
-        ><li><a class="img_thumb thumb" href="#" style="background: url('http://webdev.stephband.info/jparallax/images/parallax_thumbnails/5.jpg');">item</a></li
-        ><li class="last"><a class="img_thumb thumb" href="#" style="background: url('http://webdev.stephband.info/jparallax/images/parallax_thumbnails/6.jpg');">item</a></li>
+         <li><a class="img_thumb thumb spark" id="loadPeugeot" href="#" style="background: url('https://s3-eu-west-1.amazonaws.com/360projects/peugeot.jpg'); background-size:100%;">item</a></li
+        ><li><a class="img_thumb thumb spark" id="loadOCR" href="#" style="background: url('https://s3-eu-west-1.amazonaws.com/360projects/ocr.jpg');  background-size:100%;">item</a></li
+        ><li><a class="img_thumb thumb spark" id="loadPeugeot"  href="#" style="background: url('');  background-size:100%;">item</a></li
+        ><li><a class="img_thumb thumb spark" id="loadPeugeot" href="#" style="background: url('');  background-size:100%;">item</a></li
+        ><li><a class="img_thumb thumb spark" id="loadPeugeot" href="#" style="background: url('');  background-size:100%;">item</a></li
+        ><li class="last"><a class="img_thumb thumb" href="#" style="background: url('');">item</a></li>
       </ul>
     </div>
